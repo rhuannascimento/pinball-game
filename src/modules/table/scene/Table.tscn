@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddnau8vi4cab0"]
+
+[ext_resource type="Texture2D" uid="uid://brhsyax4i6gjt" path="res://assets/images/table-background.jpeg" id="1_xkl5t"]
+[ext_resource type="PackedScene" uid="uid://dbtvsda6i7ach" path="res://src/modules/table/components/Wall.tscn" id="2_sbv2s"]
+
+[node name="Table" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 4)
+texture = ExtResource("1_xkl5t")
+
+[node name="LeftVerticalWall" parent="." instance=ExtResource("2_sbv2s")]
+position = Vector2(-212, -585)
+
+[node name="RightVerticalWall" parent="." instance=ExtResource("2_sbv2s")]
+position = Vector2(212, -587)
+
+[node name="TopHorizontalWall" parent="." instance=ExtResource("2_sbv2s")]
+position = Vector2(-690, -377.9999)
+rotation = -1.5688553
+
+[node name="BottomHorizontalWall" parent="." instance=ExtResource("2_sbv2s")]
+position = Vector2(-709, 380)
+rotation = -1.5688553

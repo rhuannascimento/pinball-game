@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbtvsda6i7ach"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_snm05"]
+b = Vector2(0, 1350)
+
+[node name="VerticalWall" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.99514896, 1, 0, 1)
+shape = SubResource("SegmentShape2D_snm05")
