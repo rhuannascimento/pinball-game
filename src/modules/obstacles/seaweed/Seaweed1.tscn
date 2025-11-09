@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnqnsjyilhi2r"]
+
+[ext_resource type="Texture2D" uid="uid://bcsoj3nmt46k8" path="res://assets/images/seaweed/seaweed1.png" id="1_gsy01"]
+
+[node name="Seaweed1" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.11999902, 0.120000884)
+texture = ExtResource("1_gsy01")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.7240369, 1)
+polygon = PackedVector2Array(2.7622902, -30, -41.434353, -23, -22.098322, 15, -9.6680155, 25, 1.3811451, 30, 20.717176, 24, 31.766338, 17, 38.672062, 9, 41.434353, -4, 38.672062, -19, 35.909775, -22)

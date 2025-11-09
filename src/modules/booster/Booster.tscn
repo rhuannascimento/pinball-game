@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://crkeqkch84bl3"]
+
+[ext_resource type="Texture2D" uid="uid://b88pbbim8ugqi" path="res://assets/images/bubbles.png" id="1_4g585"]
+[ext_resource type="Script" uid="uid://chr5ahaebb7xg" path="res://src/modules/booster/scripts/Booster.gd" id="1_oynjm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oynjm"]
+
+[node name="Booster" type="Area2D"]
+script = ExtResource("1_oynjm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(17.987957, 23.089317)
+shape = SubResource("RectangleShape2D_oynjm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4g585")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

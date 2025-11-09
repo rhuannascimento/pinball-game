@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7tvd5vdac5q2"]
+
+[ext_resource type="Texture2D" uid="uid://wb5e577jie7m" path="res://assets/images/stones/Stone_1.png" id="1_ir755"]
+
+[node name="Stone1" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.11611785, 0.11933174)
+texture = ExtResource("1_ir755")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(2.8077104, 2.18006)
+polygon = PackedVector2Array(0, 11.008872, 7.123242, 9.632763, 11.397187, 7.7979507, 11.753349, 3.6696239, 6.4109178, -7.797951, 2.4931347, -11.467575, -9.616377, -11.008872, -11.753349, -6.880545, -11.397187, 3.6696239, -6.0547557, 8.715357)

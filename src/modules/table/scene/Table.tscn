@@ -11,14 +11,18 @@ texture = ExtResource("1_xkl5t")
 
 [node name="LeftVerticalWall" parent="." instance=ExtResource("2_sbv2s")]
 position = Vector2(-212, -585)
+scale = Vector2(8, 1.005)
 
 [node name="RightVerticalWall" parent="." instance=ExtResource("2_sbv2s")]
 position = Vector2(212, -587)
+scale = Vector2(7.9824963, 1.0040812)
 
 [node name="TopHorizontalWall" parent="." instance=ExtResource("2_sbv2s")]
 position = Vector2(-690, -377.9999)
 rotation = -1.5688553
+scale = Vector2(8, 1)
 
 [node name="BottomHorizontalWall" parent="." instance=ExtResource("2_sbv2s")]
 position = Vector2(-709, 380)
 rotation = -1.5688553
+scale = Vector2(8, 1)

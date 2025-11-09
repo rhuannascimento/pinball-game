@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://disjv6qkra1tl"]
+
+[ext_resource type="Script" uid="uid://jlrsecocb4n5" path="res://src/modules/scorearea/scripts/ScoreCounter.gd" id="1_lsi1e"]
+
+[node name="ScoreDisplay" type="Label"]
+script = ExtResource("1_lsi1e")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwar40kolrby2"]
+
+[ext_resource type="PackedScene" uid="uid://cprd4oj4rcass" path="res://src/modules/obstacles/stones/Stone.tscn" id="1_q30or"]
+[ext_resource type="PackedScene" uid="uid://c7tvd5vdac5q2" path="res://src/modules/obstacles/stones/Stone1.tscn" id="2_koobs"]
+[ext_resource type="PackedScene" uid="uid://mcxgdm8qty4" path="res://src/modules/obstacles/stones/Stone2.tscn" id="3_koobs"]
+[ext_resource type="PackedScene" uid="uid://s0jguj4ikxbs" path="res://src/modules/obstacles/stones/Stone3.tscn" id="4_73u2p"]
+[ext_resource type="PackedScene" uid="uid://kbm8rtgi41th" path="res://src/modules/obstacles/stones/Stone4.tscn" id="5_n3lf0"]
+[ext_resource type="PackedScene" uid="uid://q7mixnka1vak" path="res://src/modules/obstacles/stones/Stone5.tscn" id="6_w261k"]
+[ext_resource type="PackedScene" uid="uid://bje7v7p2nylvi" path="res://src/modules/obstacles/stones/Stone6.tscn" id="7_imnht"]
+
+[node name="StoneWall" type="Node2D"]
+
+[node name="Stone" parent="." instance=ExtResource("1_q30or")]
+
+[node name="Stone1" parent="." instance=ExtResource("2_koobs")]
+
+[node name="Stone2" parent="." instance=ExtResource("3_koobs")]
+
+[node name="Stone3" parent="." instance=ExtResource("4_73u2p")]
+
+[node name="Stone4" parent="." instance=ExtResource("5_n3lf0")]
+
+[node name="Stone5" parent="." instance=ExtResource("6_w261k")]
+
+[node name="Stone6" parent="." instance=ExtResource("7_imnht")]

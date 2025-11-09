@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgfnti634y0gy"]
+
+[ext_resource type="Script" uid="uid://dgm3lqyp3chsy" path="res://src/modules/scorearea/scripts/ScoreArea.gd" id="1_43rsm"]
+[ext_resource type="Texture2D" uid="uid://3nbkadshrkg7" path="res://assets/images/treasure/treasure.png" id="2_ofliq"]
+
+[node name="ScoreArea" type="Area2D"]
+script = ExtResource("1_43rsm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ofliq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-194, -251, 168, -254, 232, -220, 259, -148, 199, -13, 249, -6, 236, 254, -234, 255, -247, -4, -195, -7, -256, -152, -245, -217)

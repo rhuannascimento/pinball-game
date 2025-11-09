@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cml36lmq5haas"]
+
+[ext_resource type="Texture2D" uid="uid://cibhwctpe1lot" path="res://assets/images/seaweed/seaweed.png" id="1_3xnbk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bov7u"]
+size = Vector2(23, 171)
+
+[node name="Seaweed" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.11999902, 0.120000884)
+texture = ExtResource("1_3xnbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+scale = Vector2(0.7240369, 1)
+shape = SubResource("RectangleShape2D_bov7u")

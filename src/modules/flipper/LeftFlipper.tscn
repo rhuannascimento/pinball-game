@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfucgbf54kequ"]
+
+[ext_resource type="Script" uid="uid://dxwaaq08attpo" path="res://src/modules/flipper/scripts/LeftFlipper.gd" id="1_785u4"]
+[ext_resource type="Texture2D" uid="uid://bsrdry556kua1" path="res://assets/images/flipper.png" id="2_0g0b1"]
+
+[node name="LeftFlipper" type="AnimatableBody2D"]
+rotation = 0.010766496
+script = ExtResource("1_785u4")
+action_name = "flip_right"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(35.99791, -0.38758639)
+rotation = 1.5581074
+scale = Vector2(0.08559032, 0.14910947)
+texture = ExtResource("2_0g0b1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(46.997276, -0.5060153)
+polygon = PackedVector2Array(-8.117962, -10.913233, 9.870224, -12.106968, 19.869644, -12.21463, 24.933952, -6.26881, 26.98767, -1.290632, 25.063148, 5.730495, 21.117218, 10.773272, 14.128387, 11.848576, 0.12919617, 11.999304, -11.880878, 11.128559, -24.923187, 7.2687516, -37.954735, 4.408887, -44.96509, 3.484309, -47.98645, 1.5167236, -48.01875, -1.4831026, -43.040573, -3.536818, -35.04104, -3.6229482, -23.084797, -7.7519116, -17.106676, -9.816393)

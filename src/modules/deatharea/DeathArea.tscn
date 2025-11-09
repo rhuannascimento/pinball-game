@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dieggdr5nw3ny"]
+
+[ext_resource type="Script" uid="uid://bjgh5bem21ine" path="res://src/modules/deatharea/scripts/DeathArea.gd" id="1_53byq"]
+[ext_resource type="Texture2D" uid="uid://c86rfki5e6vwb" path="res://assets/images/lava.png" id="2_yll4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53byq"]
+
+[node name="DeathArea" type="Area2D"]
+script = ExtResource("1_53byq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6969785, -0.31999934)
+texture = ExtResource("2_yll4k")
+
+[node name="DethArea" type="CollisionShape2D" parent="."]
+scale = Vector2(35.72, 23.44)
+shape = SubResource("RectangleShape2D_53byq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

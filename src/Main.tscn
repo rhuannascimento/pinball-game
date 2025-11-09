@@ -1,18 +1,252 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyn7858msgi3g"]
+[gd_scene load_steps=17 format=3 uid="uid://cyn7858msgi3g"]
 
 [ext_resource type="PackedScene" uid="uid://ddnau8vi4cab0" path="res://src/modules/table/scene/Table.tscn" id="1_hk4rc"]
 [ext_resource type="PackedScene" uid="uid://b303pmjfknayr" path="res://src/modules/ball/scene/Ball.tscn" id="2_chrbn"]
-[ext_resource type="PackedScene" uid="uid://bcgylgmpjfk77" path="res://src/modules/flipper/Flipper.tscn" id="3_chrbn"]
+[ext_resource type="PackedScene" uid="uid://dieggdr5nw3ny" path="res://src/modules/deatharea/DeathArea.tscn" id="2_cj10r"]
+[ext_resource type="PackedScene" uid="uid://bcgylgmpjfk77" path="res://src/modules/flipper/RightFlipper.tscn" id="3_chrbn"]
+[ext_resource type="PackedScene" uid="uid://bfucgbf54kequ" path="res://src/modules/flipper/LeftFlipper.tscn" id="4_5qjmp"]
+[ext_resource type="PackedScene" uid="uid://cwar40kolrby2" path="res://src/modules/obstacles/stones/StoneWall.tscn" id="5_vjwby"]
+[ext_resource type="PackedScene" uid="uid://dn2oh361x6erm" path="res://src/modules/launcger/Launcher.tscn" id="6_8ec3e"]
+[ext_resource type="PackedScene" uid="uid://cml36lmq5haas" path="res://src/modules/obstacles/seaweed/Seaweed.tscn" id="6_fh42b"]
+[ext_resource type="PackedScene" uid="uid://kbm8rtgi41th" path="res://src/modules/obstacles/stones/Stone4.tscn" id="7_38a0m"]
+[ext_resource type="PackedScene" uid="uid://crkeqkch84bl3" path="res://src/modules/booster/Booster.tscn" id="7_insap"]
+[ext_resource type="PackedScene" uid="uid://dnqnsjyilhi2r" path="res://src/modules/obstacles/seaweed/Seaweed1.tscn" id="7_w32tk"]
+[ext_resource type="PackedScene" uid="uid://dh510es3t7bsm" path="res://src/modules/obstacles/coral/Coral.tscn" id="8_0ri8u"]
+[ext_resource type="PackedScene" uid="uid://dd5leyoirwkga" path="res://src/modules/obstacles/coral/Coral1.tscn" id="9_y60b8"]
+[ext_resource type="PackedScene" uid="uid://c7tvd5vdac5q2" path="res://src/modules/obstacles/stones/Stone1.tscn" id="10_x08y8"]
+[ext_resource type="PackedScene" uid="uid://dgfnti634y0gy" path="res://src/modules/scorearea/treasure/Tresure.tscn" id="14_y60b8"]
+[ext_resource type="PackedScene" uid="uid://disjv6qkra1tl" path="res://src/modules/scorearea/ScoreDisplay.tscn" id="15_x08y8"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Table" parent="." instance=ExtResource("1_hk4rc")]
 
-[node name="Ball" parent="." instance=ExtResource("2_chrbn")]
+[node name="LeftVerticalWall" parent="Table" index="1"]
+position = Vector2(-223, -585)
 
-[node name="Flipper" parent="." instance=ExtResource("3_chrbn")]
-position = Vector2(-65, 36)
-rotation = -3.1321948
+[node name="RightVerticalWall" parent="Table" index="2"]
+position = Vector2(280, -586.99994)
+
+[node name="Ball" parent="." instance=ExtResource("2_chrbn")]
+position = Vector2(252, 212)
+respawn_coordinates = Vector2(252, 212)
+
+[node name="DeathArea" parent="." instance=ExtResource("2_cj10r")]
+position = Vector2(0, 368)
+scale = Vector2(0.1599997, 0.16)
+
+[node name="StoneWalls" type="Node2D" parent="."]
+
+[node name="LeftStoneWall" parent="StoneWalls" instance=ExtResource("5_vjwby")]
+position = Vector2(1.5258789e-05, 0)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Stone" parent="StoneWalls/LeftStoneWall" index="0"]
+position = Vector2(-85.00002, 335.00006)
+rotation = 0.6592324
+scale = Vector2(1.8399987, 1.3199999)
+
+[node name="Stone1" parent="StoneWalls/LeftStoneWall" index="1"]
+position = Vector2(-193, 258)
+
+[node name="Stone2" parent="StoneWalls/LeftStoneWall" index="2"]
+position = Vector2(-213, 258)
+
+[node name="Stone3" parent="StoneWalls/LeftStoneWall" index="3"]
+position = Vector2(-86, 351)
+
+[node name="Stone4" parent="StoneWalls/LeftStoneWall" index="4"]
+position = Vector2(-183.00005, 290.00003)
+rotation = 0.50999314
+
+[node name="Stone5" parent="StoneWalls/LeftStoneWall" index="5"]
+position = Vector2(-150, 307)
+
+[node name="Stone6" parent="StoneWalls/LeftStoneWall" index="6"]
+position = Vector2(-171, 341)
+
+[node name="RightStoneWall" parent="StoneWalls" instance=ExtResource("5_vjwby")]
+position = Vector2(1.5258789e-05, 0)
+scale = Vector2(-1, 1)
+
+[node name="Stone" parent="StoneWalls/RightStoneWall" index="0"]
+position = Vector2(-87.99999, 334)
+rotation = 0.86216545
+scale = Vector2(1.8399987, 1.3199999)
+
+[node name="Stone1" parent="StoneWalls/RightStoneWall" index="1"]
+position = Vector2(-193, 258)
+
+[node name="Stone2" parent="StoneWalls/RightStoneWall" index="2"]
+position = Vector2(-209.99998, 261)
+
+[node name="Stone3" parent="StoneWalls/RightStoneWall" index="3"]
+position = Vector2(-86, 351)
+
+[node name="Stone4" parent="StoneWalls/RightStoneWall" index="4"]
+position = Vector2(-188.99998, 292.00003)
+scale = Vector2(1, 1.1200049)
+
+[node name="Stone5" parent="StoneWalls/RightStoneWall" index="5"]
+position = Vector2(-146.99998, 302)
+rotation = 0.25853845
+
+[node name="Stone6" parent="StoneWalls/RightStoneWall" index="6"]
+position = Vector2(-174.99998, 340)
+scale = Vector2(1.5200024, 1.3199999)
+
+[node name="Launcher" parent="." instance=ExtResource("6_8ec3e")]
+position = Vector2(257, 306.00003)
+scale = Vector2(0.76000285, 0.43999657)
+
+[node name="Launcher" parent="Launcher" index="0"]
+launch_speed = 3000.0
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Stone1" parent="Obstacles" instance=ExtResource("7_38a0m")]
+position = Vector2(243.99998, -368)
+rotation = 0.12642716
+scale = Vector2(1.6204283, 1)
+
+[node name="Stone5" parent="Obstacles" instance=ExtResource("7_38a0m")]
+position = Vector2(291, -323)
+rotation = 0.57428324
+
+[node name="Stone4" parent="Obstacles" instance=ExtResource("7_38a0m")]
+position = Vector2(-219, -352.00003)
+rotation = -0.47996554
+scale = Vector2(-1, 1)
+
+[node name="SeaweedWall" type="Node2D" parent="Obstacles"]
+position = Vector2(17, 18)
+
+[node name="Seaweed" parent="Obstacles/SeaweedWall" instance=ExtResource("6_fh42b")]
+position = Vector2(209, 124)
+
+[node name="Seaweed2" parent="Obstacles/SeaweedWall" instance=ExtResource("6_fh42b")]
+position = Vector2(209, -196)
+
+[node name="Seaweed4" parent="Obstacles/SeaweedWall" instance=ExtResource("6_fh42b")]
+position = Vector2(209, -38)
+
+[node name="CombinedObstacle" type="Node2D" parent="Obstacles"]
+position = Vector2(-42, 76)
+
+[node name="Stone3" parent="Obstacles/CombinedObstacle" instance=ExtResource("7_38a0m")]
+position = Vector2(-81, -218)
+rotation = 1.6659204
+scale = Vector2(0.52, 0.44000003)
+
+[node name="Seaweed1" parent="Obstacles/CombinedObstacle" instance=ExtResource("7_w32tk")]
+position = Vector2(-81, -250)
+
+[node name="Stone" parent="Obstacles/CombinedObstacle" instance=ExtResource("7_38a0m")]
+position = Vector2(-82, -215)
+scale = Vector2(0.52, 0.44)
+
+[node name="CombinedObstacle2" type="Node2D" parent="Obstacles"]
+position = Vector2(194, 76)
+
+[node name="Stone2" parent="Obstacles/CombinedObstacle2" instance=ExtResource("7_38a0m")]
+position = Vector2(-82, -216)
+rotation = 1.6659204
+scale = Vector2(0.52, 0.44000003)
+
+[node name="Stone" parent="Obstacles/CombinedObstacle2" instance=ExtResource("7_38a0m")]
+position = Vector2(-82, -215)
+scale = Vector2(0.52, 0.44)
+
+[node name="Coral" parent="Obstacles/CombinedObstacle2" instance=ExtResource("8_0ri8u")]
+position = Vector2(-81, -250)
+
+[node name="CombinedObstacle3" type="Node2D" parent="Obstacles"]
+position = Vector2(194, 76)
+
+[node name="Stone2" parent="Obstacles/CombinedObstacle3" instance=ExtResource("7_38a0m")]
+position = Vector2(-192, -133)
+rotation = 1.6659204
+scale = Vector2(0.52, 0.44)
+
+[node name="Stone" parent="Obstacles/CombinedObstacle3" instance=ExtResource("7_38a0m")]
+position = Vector2(-194, -129)
+rotation = -0.067914195
+scale = Vector2(0.52, 0.44)
+
+[node name="Coral1" parent="Obstacles/CombinedObstacle3" instance=ExtResource("9_y60b8")]
+position = Vector2(-192, -164)
+
+[node name="Stone2" parent="Obstacles" instance=ExtResource("10_x08y8")]
+position = Vector2(-110, 220)
+rotation = 0.4886922
+
+[node name="Stone3" parent="Obstacles" instance=ExtResource("10_x08y8")]
+position = Vector2(110, 220)
+rotation = -0.4886922
+scale = Vector2(-1, 1)
+
+[node name="Boosters" type="Node2D" parent="."]
+
+[node name="Booster" parent="Boosters" instance=ExtResource("7_insap")]
+position = Vector2(168, 1)
+scale = Vector2(0.11313246, 0.12929088)
+boost_speed = 1000.0
+
+[node name="Booster2" parent="Boosters" instance=ExtResource("7_insap")]
+position = Vector2(-168, 1)
+scale = Vector2(0.11313246, 0.12929088)
+boost_speed = 1000.0
+
+[node name="Booster3" parent="Boosters" instance=ExtResource("7_insap")]
+position = Vector2(-1.5258789e-05, 150)
+scale = Vector2(0.11313246, 0.12929088)
+boost_speed = 1000.0
+
+[node name="Flippers" type="Node2D" parent="."]
+position = Vector2(191, 306.00003)
+scale = Vector2(0.76000285, 0.43999657)
+
+[node name="LeftFlipper" parent="Flippers" instance=ExtResource("4_5qjmp")]
+position = Vector2(-360, 10)
+rotation = 0.2268928
+scale = Vector2(1.3159359, 2.2726574)
+skew = -0.012362242
+action_name = "flip_left"
+
+[node name="RightFlipper" parent="Flippers" instance=ExtResource("3_chrbn")]
+position = Vector2(-140, 10)
+rotation = -0.2268928
+scale = Vector2(1.3159359, 2.2726574)
+skew = -0.012362242
+
+[node name="Tresure" type="Node2D" parent="."]
+position = Vector2(0, 4)
+
+[node name="ScoreArea" parent="Tresure" instance=ExtResource("14_y60b8")]
+position = Vector2(-1, -264.99997)
+scale = Vector2(0.07999879, 0.07999927)
+
+[node name="ScoreArea2" parent="Tresure" instance=ExtResource("14_y60b8")]
+position = Vector2(-80, 60)
+scale = Vector2(0.07999879, 0.07999927)
+points_value = 50
+
+[node name="ScoreArea3" parent="Tresure" instance=ExtResource("14_y60b8")]
+position = Vector2(80, 60)
+scale = Vector2(0.07999879, 0.07999927)
+points_value = 50
+
+[node name="ScoreDisplay" parent="Tresure" instance=ExtResource("15_x08y8")]
+offset_top = -364.0
+offset_right = 1.0
+offset_bottom = -341.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.7, 1.7)
+position = Vector2(18, 0)
+offset = Vector2(10, 0)
+zoom = Vector2(1.5, 1.7)
+
+[editable path="Table"]
+[editable path="StoneWalls/LeftStoneWall"]
+[editable path="StoneWalls/RightStoneWall"]
+[editable path="Launcher"]

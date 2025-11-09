@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh510es3t7bsm"]
+
+[ext_resource type="Texture2D" uid="uid://dka2eqlcls52s" path="res://assets/images/coral/coral.png" id="1_nsk87"]
+
+[node name="Coral" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.11999902, 0.120000884)
+texture = ExtResource("1_nsk87")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.7240369, 1)
+polygon = PackedVector2Array(-15.192596, -22, -37.290916, -10, -35.909775, 6, -15.192596, 29, 1.3811451, 30, 16.573742, 29, 29.004047, 12, 37.290916, 0, 34.52863, -13, 2.7622902, -30, -8.286871, -30)
